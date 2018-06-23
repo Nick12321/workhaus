@@ -5,7 +5,7 @@ class Employee:
         self.department = department
 
     def getEmployeeInfo(self):
-        return 'Name: ' + self.name + ', title: ' + ', department: ' + self.department
+        return 'Name: ' + self.name + ', title: ' + self.title + ', department: ' + self.department
 
 class Permanent(Employee):
     def __init__(self, name, title, department):
@@ -35,5 +35,37 @@ class Manager(Permanent):
             print(employee.name)
 
 class TeamLead(Permanent):
-    def __init__(self, name, title, department)
-    super().__init__(name)
+    def __init__(self, name, title, department):
+        super().__init__(name, title, department)
+        self.teamMember = []
+
+    def addTeamMember(self, employee):
+        self.teamMember.append(employee)
+
+    def listTeamMembers(self):
+        for teamMembers in self.teamMember:
+            print(teamMember.name)
+
+class Engineer(Permanent):
+    def __init__(self, name, title, department):
+        super().__init__(name, title, department)
+
+class Intern(Temporary):
+    def __init__(self, name, title, department, endDate):
+        super().__init__(name, title, department, endDate)
+
+employee1 = Engineer('Bob', 'Software Engineer', 'IT')
+employee2 = Engineer('Jon', 'Software Engineer', 'IT')
+employee3 = TeamLead('Jane', 'Backend Lead', 'IT')
+employee3.addTeamMember(employee1)
+employee3.addTeamMember(employee2)
+employee3.listTeamMembers()
+
+print(isinstance(employee3, Manager))
+print(isinstance(employee3, Engineer))
+print(isinstance(employee3, TeamLead))
+print(isinstance(employee3, Employee))
+
+print(employee3.getEmployeeInfo())
+employee4 = Intern('Ali', 'Junior Python Dev', 'IT', 'Jan 1, 2019')
+print(employee4.getEmployeeInfo())
