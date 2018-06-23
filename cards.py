@@ -25,3 +25,7 @@ class Deck:
 
 deck = Deck()
 deck.printDeck()
+
+def shuffleCard:
+    for card in self.deck:
+        
