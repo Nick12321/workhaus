@@ -2,8 +2,8 @@ class Highway:
 
     def __init__(self, name):
         self.name = name
-        self.eastbound = []
-        self.westbound = []
+        self.eastBound = []
+        self.westBound = []
 
     def addEastBoundCar(self, car):
         self.eastBound.append(car)
@@ -72,3 +72,5 @@ highway.addEastBoundCar(car2)
 highway.addEastBoundCar(car3)
 highway.addWestBoundCar(car4)
 highway.addWestBoundCar(car5)
+
+highway.printHighwayData()
