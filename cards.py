@@ -28,4 +28,7 @@ deck.printDeck()
 
 def shuffleCard:
     for card in self.deck:
-        
+
+
+if __name__ == "__main__":
+    myMainFunctionToRunApplication()
