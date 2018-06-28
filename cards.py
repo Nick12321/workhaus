@@ -33,8 +33,6 @@ class Deck:
         deckCount = len(self.deck)
         print("Number of cards left in Random:")
         print(randomCount)
-        print("Number of cards in Deck:")
-        print(deckCount)
 
     def printDeck(self):
         for card in self.deck:
@@ -42,10 +40,3 @@ class Deck:
 
 deck = Deck()
 deck.printDeck()
-
-def shuffleCard:
-    for card in self.deck:
-
-
-if __name__ == "__main__":
-    myMainFunctionToRunApplication()
