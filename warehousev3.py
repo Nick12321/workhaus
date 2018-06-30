@@ -4,15 +4,21 @@ DATE = datetime.datetime.now()
 class Item:
 
     def __init__(self):
+        self.newItem = []
+
+    def addItem(self, newItem):
+        Factory.addFactoryItem(self.newItem)
+
+
+class Factory:
+
+    def __init__(self):
         self.list_of_items = []
         self.items_on_the_list = 0
 
-    def addItem(self, item_attribute_list):
+    def addFactoryItem(self, item_attribute_list):
         self.list_of_items.append(item_attribute_list)
         self.items_on_the_list = self.items_on_the_list + 1
-
-    def getNumberOfItems(self):
-        return (self.items_on_the_list)
 
     def printItemList(self):
         itemPrint = 0
@@ -20,12 +26,6 @@ class Item:
         while itemPrint < numberOfItems:
             print(self.list_of_items[itemPrint][0] + ", " + self.list_of_items[itemPrint][1] + ", " +self.list_of_items[itemPrint][2])
             itemPrint += 1
-
-
-class Factory:
-
-    def listAllItems(self):
-        return self.itemName + ', ' + self.label + ', ' + self.postalCode + ', ' + self.area
 
 item = Item()
 newItem = []
