@@ -7,7 +7,7 @@ class Item:
         self.newItem = []
 
     def addItem(self, newItem):
-        Factory.addFactoryItem(self.newItem)
+        Factory.addItem(self.newItem)
 
 
 class Factory:
@@ -16,7 +16,7 @@ class Factory:
         self.list_of_items = []
         self.items_on_the_list = 0
 
-    def addFactoryItem(self, item_attribute_list):
+    def addItem(self, item_attribute_list):
         self.list_of_items.append(item_attribute_list)
         self.items_on_the_list = self.items_on_the_list + 1
 
