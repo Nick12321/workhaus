@@ -1,4 +1,11 @@
 
+class linkedList:
+    def __init__(self):
+        self.listOfItems = []
+
+    def addItemToLinkedList:
+        
+
 
 item1 = "Four score and twaenty years ago"
 item2 = "Get busy living or get busy dieing"
