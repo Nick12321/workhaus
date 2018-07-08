@@ -1,4 +1,4 @@
-class Node(nodeObject):
+class Node(object):
 
     def __init__(self, data=None, nextNode=None):
         self.data = data
@@ -13,7 +13,7 @@ class Node(nodeObject):
     def setNext(self, newNext):
         self.nextNode = newNext
 
-class linkedList(nodeObject):
+class linkedList(object):
     def __init__(self, head=None):
         self.head = head
 
