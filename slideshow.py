@@ -1,8 +1,15 @@
-class Node(object):
+class Node:
+    def __init__(self):
+        self.noOfNodes = 0
 
-    def __init__(self, data=None, nextNode=None):
-        self.data = data
+    def createNode(self, title, body):
+        self.title = title
+        self.body = body
         self.nextNode = nextNode
+
+    # def __init__(self, data=None, nextNode=None):
+    #     self.data = data
+    #     self.nextNode = nextNode
 
     def getData(self):
         return self.data
@@ -13,12 +20,14 @@ class Node(object):
     def setNext(self, newNext):
         self.nextNode = newNext
 
-class linkedList(object):
-    def __init__(self, head=None):
+class linkedList:
+    def __init__(self, title, data):
+        self.title = title
+        self.data = data
         self.head = head
 
-    def insert(self, data):
-        newNode = Node(data)
+    def insert(self):
+        newNode = Node(title, data)
         newNode.setNext(self.head)
         self.head = newNode
 
@@ -61,14 +70,9 @@ class linkedList(object):
 
 
 list = linkedList()
-body1 = "Four score and twenty years ago"
-body2 = "Get busy living or get busy dieing"
-body3 = "Life is what happens when you're busy making other plans"
-body4 = "Twenty years from now you will be more disappointed by the things you didnt do than the things you did do"
-body5 = "Great minds discuss ideas; average minds discuss events; small minds discuss people"
-list.insert(body1)
-list.insert(body2)
-list.insert(body3)
-list.insert(body4)
-list.insert(body5)
+node1 = list.insert("Abraham Lincoln", "Four score and seven years ago")
+node2 = list.insert("Shawshank", "Get busy living or get busy dieing")
+node3 = list.insert("John Lennon", "Life is what happens when you're busy making other plans")
+node4 = list.insert("Mark Twain", "Twenty years from now you will be more disappointed by the things you didnt do than the things you did do")
+node5 = list.insert("Eleanor Roosevelt", "Great minds discuss ideas; average minds discuss events; small minds discuss people")
 print('here')
