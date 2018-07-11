@@ -1,15 +1,11 @@
-class Node:
-    def __init__(self):
-        self.noOfNodes = 0
+class Node(object):
 
-    def createNode(self, title, body):
+    def __init__(self, title = None, data=None, counter = None, nextNode=None):
         self.title = title
-        self.body = body
+        self.data = data
+        self.id = counter
         self.nextNode = nextNode
-
-    # def __init__(self, data=None, nextNode=None):
-    #     self.data = data
-    #     self.nextNode = nextNode
+        print("ID: " + str(self.id) + " Title: " + self.title + ", Body: " + self.data)
 
     def getData(self):
         return self.data
@@ -20,16 +16,15 @@ class Node:
     def setNext(self, newNext):
         self.nextNode = newNext
 
-class linkedList:
-    def __init__(self, title, data):
-        self.title = title
-        self.data = data
+class linkedList(object):
+    def __init__(self, head=None):
         self.head = head
 
-    def insert(self):
-        newNode = Node(title, data)
+    def insert(self, title, data, counter):
+        newNode = Node(title, data, counter)
         newNode.setNext(self.head)
         self.head = newNode
+
 
     def size(self):
         current = self.head
@@ -70,9 +65,24 @@ class linkedList:
 
 
 list = linkedList()
-node1 = list.insert("Abraham Lincoln", "Four score and seven years ago")
-node2 = list.insert("Shawshank", "Get busy living or get busy dieing")
-node3 = list.insert("John Lennon", "Life is what happens when you're busy making other plans")
-node4 = list.insert("Mark Twain", "Twenty years from now you will be more disappointed by the things you didnt do than the things you did do")
-node5 = list.insert("Eleanor Roosevelt", "Great minds discuss ideas; average minds discuss events; small minds discuss people")
+counter = 0
+title1 = "Abraham Lincoln"
+title2 = "Shawshank"
+title3 = "John Lennon"
+title4 = "Mark Twain"
+title5 = "Eleanor Roosevelt"
+body1 = "Four score and twenty years ago"
+body2 = "Get busy living or get busy dieing"
+body3 = "Life is what happens when you're busy making other plans"
+body4 = "you will be more disappointed by what you didnt do than what you did"
+body5 = "Great minds discuss ideas; average minds discuss events"
+list.insert(title1, body1, counter)
+counter += 1
+list.insert(title2, body2, counter)
+counter += 1
+list.insert(title3, body3, counter)
+counter += 1
+list.insert(title4, body4, counter)
+counter += 1
+list.insert(title5, body5, counter)
 print('here')

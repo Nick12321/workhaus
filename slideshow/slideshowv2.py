@@ -1,8 +1,10 @@
 class Node(object):
 
-    def __init__(self, data=None, nextNode=None):
+    def __init__(self, title = None, data=None, nextNode=None):
+        self.title = title
         self.data = data
         self.nextNode = nextNode
+        print(" Title: " + self.title + ", Body: " + self.data)
 
     def getData(self):
         return self.data
@@ -17,10 +19,11 @@ class linkedList(object):
     def __init__(self, head=None):
         self.head = head
 
-    def insert(self, data):
-        newNode = Node(data)
+    def insert(self, title, data):
+        newNode = Node(title, data)
         newNode.setNext(self.head)
         self.head = newNode
+
 
     def size(self):
         current = self.head
@@ -61,14 +64,19 @@ class linkedList(object):
 
 
 list = linkedList()
+title1 = "Abraham Lincoln"
+title2 = "Shawshank"
+title3 = "John Lennon"
+title4 = "Mark Twain"
+title5 = "Eleanor Roosevelt"
 body1 = "Four score and twenty years ago"
 body2 = "Get busy living or get busy dieing"
 body3 = "Life is what happens when you're busy making other plans"
-body4 = "Twenty years from now you will be more disappointed by the things you didnt do than the things you did do"
-body5 = "Great minds discuss ideas; average minds discuss events; small minds discuss people"
-list.insert(body1)
-list.insert(body2)
-list.insert(body3)
-list.insert(body4)
-list.insert(body5)
+body4 = "you will be more disappointed by what you didnt do than what you did"
+body5 = "Great minds discuss ideas; average minds discuss events"
+list.insert(title1, body1)
+list.insert(title2, body2)
+list.insert(title3, body3)
+list.insert(title4, body4)
+list.insert(title5, body5)
 print('here')
