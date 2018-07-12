@@ -34,7 +34,10 @@ class Node(object):
     def setPrev(self, newPrev):
         self.previousNode = newPrev #newPrev is the same as newHead
 
-    def isValid(self):      #returns a true of false if the node has valid values
+    def getPrev(self):
+        return self.previousNode
+
+    def isValid(self):      #returns a true of false if the node has valid values - if title is 'None' then attributes werent set because of a type mis-match
         if self.title != None:
             return True
         else:
@@ -49,19 +52,7 @@ class Trash(object):        #implements everything in node, this is for checking
         self.id = counter
         self.nextNode = nextNode
         self.previousNode = previousNode
-        print("ID: " + str(self.id) + " Title: " + self.title + ", Body: " + self.data)
 
-    def getData(self):
-        return self.data
-
-    def getNext(self):
-        return self.nextNode
-
-    def setNext(self, newNext): #oldHead is the same as newNext
-        self.nextNode = newNext
-
-    def setPrev(self, newPrev):
-        self.previousNode = newPrev #newPrev is the same as newHead
 
 class linkedList(object):
     def __init__(self, head=None, tail=None, current=None):
