@@ -1,0 +1,60 @@
+body {
+	font-family: 'Oxygen', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+a:hover {
+	text-decoration: underline;
+}
+#title {
+		text-align: center;
+		padding-bottom: 10px;
+		border-bottom: 10px dashed #dad9e0;
+}
+
+#applecontainer {
+	background-color: #d60438;
+	color: white;
+}
+#applelinktext {
+	background-color: white;
+	color: red;
+}
+
+#orangecontainer {
+	background-color: #f25704;
+	color: white;
+}
+
+#orangelinktext {
+	background-color: white;
+	color: orange;
+}
+
+.fruitcontainer {
+	position: relative;
+	display: flex;
+	margin-bottom: 10px;
+	/*border: 1px solid red;*/
+}
+
+.fruitimage {
+	position: relative;
+	/*border: 1px solid black;*/
+	width: 50%;
+	float: left;
+}
+.fruitcontent {
+	position: relative;
+	/*border: 1px solid blue;*/
+	width: 50%;
+	float: right;
+}
+
+.fruitcontent h3, p {
+	width: 85%;
+	margin: 10 10 10 10;
+}
